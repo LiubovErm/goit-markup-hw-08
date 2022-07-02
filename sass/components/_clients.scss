@@ -1,0 +1,31 @@
+.clients-section {
+    @extend %section; 
+    @include centeredFlex(flex);
+    }  
+.clients-section__list {
+    @include centeredFlex(flex);
+    @extend %list;
+}
+.clients-section__item:not(:first-child) {
+    margin-left: 30px;
+    }
+.clients-section__link {
+    @include centeredFlex(flex);
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    color: $icon-color;
+    @include bordered ($icon-color);
+    @include transition(border-color);
+    @include transition(color);
+    &:hover,
+    &:focus {
+        color:$accent-color;
+        border-color: $accent-color;
+    }
+    }
+
+.icon-client {
+    fill: currentColor;
+    }
+    

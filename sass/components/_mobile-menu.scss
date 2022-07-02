@@ -1,0 +1,37 @@
+.menu-button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.menu-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    font-size: 40px;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background-color: $main-white-color;
+    &.is-open {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.close-menu {
+    position: absolute;
+    // top: 10px;
+    // right: 15px;
+    border: none;
+    background-color:transparent;
+    cursor: pointer;
+}
+// @media screen and (min-width: 768px) {
+//     .menu-button {
+//         display: block;
+//     }
+// }

@@ -307,6 +307,10 @@ ul {
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -323,6 +327,21 @@ ul {
   margin-bottom: 50px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 .header {
   border-bottom: 1px solid #ECECEC;
 }
@@ -337,6 +356,7 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .logo {
@@ -440,6 +460,41 @@ ul {
 .header-icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.menu-button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  font-size: 40px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: #FFFFFF;
+}
+.menu-container.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-menu {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .hero-section {

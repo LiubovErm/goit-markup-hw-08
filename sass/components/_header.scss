@@ -3,6 +3,7 @@
 }
 .header-container {
     @include centeredFlex(flex);
+    position: relative;
 }
 .logo {
     display: block;

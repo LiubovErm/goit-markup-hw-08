@@ -10,28 +10,39 @@
     &:focus {
         color: $accent-color;
     }
-}
-.menu-button__icon {
+    @media screen and (min-width: 768px) {
+        display: none;
+        }
+    }
+.menu-button__icon,
+.close-menu {
     fill:currentColor;
 }
 .close-menu {
+    display: block;
     position: absolute;
-    // top: 10px;
-    // right: 15px;
+    top: 10px;
+    right: 15px;
+    padding: 11px 10px;
     border: none;
     background-color: transparent;
     cursor: pointer;
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        }
 }
 
 .menu-container {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 40px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    text-align: center;
-    font-size: 40px;
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
@@ -40,5 +51,66 @@
     &.is-open {
         opacity: 1;
         visibility: visible;
+    @include transition(opacity);     
     }
+}
+.mobile-menu__list {
+    @extend %list;
+}
+.mobile-menu__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+.mobile-menu__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+    cursor: pointer;
+    @include transition(color);
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        }
+}
+.mobile-menu__link--current {
+    color: $accent-color;
+}
+.mobile-contacts__list {
+    @extend %list;
+    margin-bottom: 64px;
+}
+.mobile-contacts__link {
+    text-decoration: none;
+}
+.mobile-contacts__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+.mobile-contacts__link--phone {
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+}
+.mobile-contacts__link--email {
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
+}
+.mobile-social {
+    display: flex;
+    flex-wrap: wrap;
+    @extend %list;
+}
+.mobile-social__item:not(:last-child) {
+    margin-right: 20px;
+}
+.mobile-social__link {
+    text-decoration: none;
+    color: $accent-color;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
 }

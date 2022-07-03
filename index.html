@@ -65,7 +65,7 @@
         <nav class="mobile-menu">
            <ul class="mobile-menu__list">
                <li class="mobile-menu__item">
-               <a href="./index.html" class="mobile-menu__link">Студия</a>
+               <a href="./index.html" class="mobile-menu__link mobile-menu__link--current">Студия</a>
                </li>
                <li class="mobile-menu__item">
                <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
@@ -74,7 +74,31 @@
                <a href="#contacts" class="mobile-menu__link">Контакты</a>
                </li>
             </ul>
-        </nav>
+            </nav>
+            <div class="mobile-contacts">
+                <ul class="mobile-contacts__list">
+                    <li class="mobile-contacts__item">
+                        <a href="tel:+380961111111" class="mobile-contacts__link mobile-contacts__link--phone">+38 096 111 11 11</a>
+                    </li>
+                    <li class="mobile-contacts__item">
+                        <a href="mailto:info@devstudio.com" class="mobile-contacts__link mobile-contacts__link--email">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mobile-social">
+                    <li class="mobile-social__item">
+                    <a href="/" class="mobile-social__link">Instagram</a>
+                    </li>
+                    <li class="mobile-social__item">
+                    <a href="/" class="mobile-social__link">Twitter</a>
+                    </li>
+                    <li class="mobile-social__item">
+                    <a href="/" class="mobile-social__link">Facebook</a>
+                    </li>
+                    <li class="mobile-social__item">
+                    <a href="/" class="mobile-social__link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         </div>
     </header>
@@ -209,17 +233,21 @@
             <h2 class="section-title">Наша команда</h2>
             <ul class="team-section__list">
                 <li class="team-section__item">
-                        <img 
-                        srcset="./images/comanda/igor-mobile.jpg 450w,
-                        ./images/comanda/igor-mobile@2x.jpg 900w,
-                        ./images/comanda/igor-tablet.jpg 354w,
-                        ./images/comanda/igor-tablet@2x.jpg 708w,
-                        ./images/comanda/igor-desctop.jpg 270w,
-                        ./images/comanda/igor-desctop@2x.jpg 540w"
-                        src="./images/igorfoto.jpg" 
-                        alt="foto igor designer" 
-                        sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw, 100vw" 
-                        class="team-section__img"/>
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="
+                            ./images/comanda/igor-desctop.jpg 1x,
+                            ./images/comanda/igor-desctop@2x.jpg 2x
+                            "/>
+                        <source media="(min-width: 768px)" srcset="
+                            ./images/comanda/igor-tablet.jpg 1x,
+                            ./images/comanda/igor-tablet@2x.jpg 2x
+                            "/>
+                        <source media="(max-width: 767px)" srcset="
+                            ./images/comanda/igor-mobile.jpg 1x,
+                            ./images/comanda/igor-mobile@2x.jpg 2x
+                            "/>
+                        <img src="./images/igorfoto.jpg" alt="foto igor designer" class="team-section__img" />
+                    </picture>
                     <div class="team-section__meta">
                     <h3 class="team-section__subtitle">Игорь Демьяненко</h3>
                     <p class="team-section__text" lang="en">Product Designer</p>
@@ -256,17 +284,21 @@
                     </ul>
                 </li>
                 <li class="team-section__item">
-                    <img 
-                    srcset="./images/comanda/olga-mobile.jpg 450w,
-                        ./images/comanda/olga-mobile@2x.jpg 900w,
-                        ./images/comanda/olga-tablet.jpg 354w,
-                        ./images/comanda/olga-tablet@2x.jpg 708w,
-                        ./images/comanda/olga-desctop.jpg 270w,
-                        ./images/comanda/olga-desctop@2x.jpg 540w"
-                    src="./images/olgafoto.jpg" 
-                    alt="foto olga developer" 
-                    sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw, 100vw"
-                    class="team-section__img">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="
+                            ./images/comanda/olga-desctop.jpg 1x,
+                            ./images/comanda/olga-desctop@2x.jpg 2x
+                            " />
+                        <source media="(min-width: 768px)" srcset="
+                            ./images/comanda/olga-tablet.jpg 1x,
+                            ./images/comanda/olga-tablet@2x.jpg 2x
+                            " />
+                        <source media="(max-width: 767px)" srcset="
+                            ./images/comanda/olga-mobile.jpg 1x,
+                            ./images/comanda/olga-mobile@2x.jpg 2x
+                            " />
+                        <img src="./images/olgafoto.jpg" alt="foto olga developer" class="team-section__img">
+                    </picture>
                     <div class="team-section__meta">
                     <h3 class="team-section__subtitle">Ольга Репина</h3>
                     <p class="team-section__text" lang="en">Fronted Developer</p>
@@ -303,17 +335,23 @@
                     </ul>
                 </li>
                 <li class="team-section__item">
-                    <img 
-                    srcset="./images/comanda/nikolay-mobile.jpg 450w,
-                        ./images/comanda/nikolay-mobile@2x.jpg 900w,
-                        ./images/comanda/nikolay-tablet.jpg 354w,
-                        ./images/comanda/nikolay-tablet@2x.jpg 708w,
-                        ./images/comanda/nikolay-desctop.jpg 270w,
-                        ./images/comanda/nikolay-desctop@2x.jpg 540w"
-                    src="./images/nikolayfoto.jpg" 
-                    alt="foto nikolay marketing" 
-                    sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw, 100vw" 
-                    class="team-section__img">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="
+                            ./images/comanda/nikolay-desctop.jpg 1x,
+                            ./images/comanda/nikolay-desctop@2x.jpg 2x
+                        " />
+                        <source media="(min-width: 768px)" srcset="
+                            ./images/comanda/nikolay-tablet.jpg 1x,
+                            ./images/comanda/nikolay-tablet@2x.jpg 2x
+                         " />
+                        <source media="(max-width: 767px)" srcset="
+                            ./images/comanda/nikolay-mobile.jpg 1x,
+                            ./images/comanda/nikolay-mobile@2x.jpg 2x
+                        " />
+                        <img src="./images/nikolayfoto.jpg" 
+                         alt="foto nikolay marketing" 
+                         class="team-section__img">
+                    </picture>
                     <div class="team-section__meta">
                     <h3 class="team-section__subtitle">Николай Тарасов</h3>
                     <p class="team-section__text" lang="en">Marketing</p>
@@ -350,17 +388,21 @@
                     </ul>
                 </li>
                 <li class="team-section__item">
-                    <img 
-                    srcset="./images/comanda/michail-mobile.jpg 450w,
-                        ./images/comanda/michail-mobile@2x.jpg 900w,
-                        ./images/comanda/michaily-tablet.jpg 354w,
-                        ./images/comanda/michail-tablet@2x.jpg 708w,
-                        ./images/comanda/michail-desctop.jpg 270w,
-                        ./images/comanda/michail-desctop@2x.jpg 540w"
-                    src="./images/michailfoto.jpg" 
-                    alt="foto michail designer" 
-                    sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw, 100vw" 
-                    class="team-section__img">
+                    <picture>
+                        <source media="(min-width: 1200px)" srcset="
+                            ./images/comanda/michail-desctop.jpg 1x,
+                            ./images/comanda/michail-desctop@2x.jpg 2x
+                            " />
+                        <source media="(min-width: 768px)" srcset="
+                            ./images/comanda/michail-tablet.jpg 1x,
+                            ./images/comanda/michail-tablet@2x.jpg 2x
+                            " />
+                        <source media="(max-width: 767px)" srcset="
+                            ./images/comanda/michail-mobile.jpg 1x,
+                            ./images/comanda/michail-mobile@2x.jpg 2x
+                            " />
+                        <img src="./images/michailfoto.jpg" alt="foto michail designer" class="team-section__img">
+                    </picture>
                     <div class="team-section__meta">
                     <h3 class="team-section__subtitle">Михаил Ермаков</h3>
                     <p class="team-section__text" lang="en">UI Designer</p>

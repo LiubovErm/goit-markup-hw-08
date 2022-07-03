@@ -6,6 +6,9 @@ body {
     font-size: 14px;
     color: $primary-text-color;
     background-color: $main-white-color;
+    @media screen and (min-width: 320px) {
+        overflow-x: hidden;
+        }
 }
 h1,
 h2,

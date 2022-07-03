@@ -2,9 +2,11 @@
     border-bottom: 1px solid $border-footer;
 }
 .header-container {
-    @include centeredFlex(flex);
+    display: flex;
+    height: 80px;
     @media screen and (max-width: 767px) {
-            justify-content: space-between;;
+            height: 60px;
+            justify-content: space-between;
         }
 }
 .logo {
@@ -15,12 +17,19 @@
     font-size: 24px;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 0;
     color:$primary-text-color;
+    @media screen and (min-width: 768px) {
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
     @media screen and (min-width: 1200px) {
         font-size: 26px;
         line-height: 1.19;
+        padding-top: 24px;
+        padding-bottom: 25px;
     }
 }
 .logo__text {
@@ -34,12 +43,21 @@
             display: flex;
         }
 }
-// .navigation {
-//     margin-left: 93px;
-//     }
+.navigation {
+    @include centeredFlex(flex);
+    margin-left: 88px;
+    @media screen and (min-width: 1200px) {
+            margin-left: 93px;
+        }
+    }
 .navigation__list {
     @include centeredFlex(flex);
     @extend %list;
+}
+.navigation__item {
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
 }
 // .navigation__item:not(:last-child) {
 //     margin-right: 50px;
@@ -71,13 +89,14 @@
 .header-contacts {
     @extend %list;
     // display: flex;
-    margin-left: auto;
-    @media screen and (max-width: 767px) {
-            display: none;
-        }
+    margin-left: 84px;
+    // @media screen and (max-width: 767px) {
+    //         display: none;
+    //     }
     @media screen and (min-width: 768px) {
             display: flex;
             flex-direction: column;
+            justify-content: center;
         }
     @media screen and (min-width: 1200px) {
             flex-direction: row;
@@ -86,6 +105,11 @@
 // .header-contacts__item:not(:last-child) {
 //     margin-right: 30px;
 //     }
+.header-contacts__item {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
 .header-contacts__link {
     @include centeredFlex(inline-flex);
     text-decoration: none;

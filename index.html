@@ -19,21 +19,14 @@
         <div class="container">
         <div class="header-container">
             <a href="./index.html" class="logo" lang="en"><span class="logo__text">Web</span>Studio</a>
-            
-            <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-open>
-             <svg class="menu-button__icon" width="24" height="16" area-label="button of mobile menu">
-               <use href="./images/icons.svg#icon-menu-mobile" class="icon-menu"></use>
-             </svg>
-            </button>
-
-            <div class="menu-container" id="menu-container" data-menu>
-            <button type="button" class="close-menu" data-menu-close>
+        
+        <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-open>
             <svg class="menu-button__icon" width="24" height="16" area-label="button of mobile menu">
-               <use href="./images/icons.svg#icon-close-mobile" class="icon-cross"></use>
+                <use href="./images/icons.svg#icon-menu-mobile" class="icon-menu"></use>
             </svg>
-            </button>
-            </div>
+        </button>
 
+        <div class="menu-desktop"> 
         <nav class="navigation">
             <ul class="navigation__list">
                 <li class="navigation__item"><a href="#hero" class="navigation__link navigation__link--current">Студия</a></li>
@@ -59,6 +52,29 @@
                     </a>
                 </li>
             </ul>
+        </div>
+        </div>
+
+        <div class="menu-container" id="menu-container" data-menu>
+            <button type="button" class="close-menu" data-menu-close>
+                <svg class="menu-button__icon" width="24" height="16" area-label="button of mobile menu">
+                    <use href="./images/icons.svg#icon-close-mobile" class="icon-cross"></use>
+                </svg>
+            </button>
+        
+        <nav class="mobile-menu">
+           <ul class="mobile-menu__list">
+               <li class="mobile-menu__item">
+               <a href="./index.html" class="mobile-menu__link">Студия</a>
+               </li>
+               <li class="mobile-menu__item">
+               <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
+               </li>
+               <li class="mobile-menu__item">
+               <a href="#contacts" class="mobile-menu__link">Контакты</a>
+               </li>
+            </ul>
+        </nav>
         </div>
         </div>
     </header>
@@ -193,7 +209,17 @@
             <h2 class="section-title">Наша команда</h2>
             <ul class="team-section__list">
                 <li class="team-section__item">
-                    <img src="./images/igorfoto.jpg" alt="foto igor designer" width="270" height="260" class="team-section__img">
+                        <img 
+                        srcset="./images/comanda/igor-mobile.jpg 450w,
+                        ./images/comanda/igor-mobile@2x.jpg 900w,
+                        ./images/comanda/igor-tablet.jpg 354w,
+                        ./images/comanda/igor-tablet@2x.jpg 708w,
+                        ./images/comanda/igor-desctop.jpg 270w,
+                        ./images/comanda/igor-desctop@2x.jpg 540w"
+                        src="./images/igorfoto.jpg" 
+                        alt="foto igor designer" 
+                        sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw, 100vw" 
+                        class="team-section__img"/>
                     <div class="team-section__meta">
                     <h3 class="team-section__subtitle">Игорь Демьяненко</h3>
                     <p class="team-section__text" lang="en">Product Designer</p>
@@ -230,7 +256,17 @@
                     </ul>
                 </li>
                 <li class="team-section__item">
-                    <img src="./images/olgafoto.jpg" alt="foto olga developer" width="270" height="260" class="team-section__img">
+                    <img 
+                    srcset="./images/comanda/olga-mobile.jpg 450w,
+                        ./images/comanda/olga-mobile@2x.jpg 900w,
+                        ./images/comanda/olga-tablet.jpg 354w,
+                        ./images/comanda/olga-tablet@2x.jpg 708w,
+                        ./images/comanda/olga-desctop.jpg 270w,
+                        ./images/comanda/olga-desctop@2x.jpg 540w"
+                    src="./images/olgafoto.jpg" 
+                    alt="foto olga developer" 
+                    sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw, 100vw"
+                    class="team-section__img">
                     <div class="team-section__meta">
                     <h3 class="team-section__subtitle">Ольга Репина</h3>
                     <p class="team-section__text" lang="en">Fronted Developer</p>
@@ -267,7 +303,17 @@
                     </ul>
                 </li>
                 <li class="team-section__item">
-                    <img src="./images/nikolayfoto.jpg" alt="foto nikolay marketing" width="270" height="260" class="team-section__img">
+                    <img 
+                    srcset="./images/comanda/nikolay-mobile.jpg 450w,
+                        ./images/comanda/nikolay-mobile@2x.jpg 900w,
+                        ./images/comanda/nikolay-tablet.jpg 354w,
+                        ./images/comanda/nikolay-tablet@2x.jpg 708w,
+                        ./images/comanda/nikolay-desctop.jpg 270w,
+                        ./images/comanda/nikolay-desctop@2x.jpg 540w"
+                    src="./images/nikolayfoto.jpg" 
+                    alt="foto nikolay marketing" 
+                    sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw, 100vw" 
+                    class="team-section__img">
                     <div class="team-section__meta">
                     <h3 class="team-section__subtitle">Николай Тарасов</h3>
                     <p class="team-section__text" lang="en">Marketing</p>
@@ -304,7 +350,17 @@
                     </ul>
                 </li>
                 <li class="team-section__item">
-                    <img src="./images/michailfoto.jpg" alt="foto michail designer" width="270" height="260" class="team-section__img">
+                    <img 
+                    srcset="./images/comanda/michail-mobile.jpg 450w,
+                        ./images/comanda/michail-mobile@2x.jpg 900w,
+                        ./images/comanda/michaily-tablet.jpg 354w,
+                        ./images/comanda/michail-tablet@2x.jpg 708w,
+                        ./images/comanda/michail-desctop.jpg 270w,
+                        ./images/comanda/michail-desctop@2x.jpg 540w"
+                    src="./images/michailfoto.jpg" 
+                    alt="foto michail designer" 
+                    sizes="(min-width:1200px) 25vw, (min-width:768px) 50vw, 100vw" 
+                    class="team-section__img">
                     <div class="team-section__meta">
                     <h3 class="team-section__subtitle">Михаил Ермаков</h3>
                     <p class="team-section__text" lang="en">UI Designer</p>
@@ -346,7 +402,7 @@
 
         <section class="clients-section">
             <div class="container">
-                <h2 class="section-title">Постоянные клиенты</h2>
+                <h2 class="section-title section-title__team">Постоянные клиенты</h2>
                 <ul class="clients-section__list">
                     <li class="clients-section__item">
                         <a href="/" class="clients-section__link">

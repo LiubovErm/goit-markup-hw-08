@@ -19,7 +19,6 @@
      @media screen and (min-width: 1200px) {
              display: flex;
     }
-    // @include centeredFlex(flex);
     @extend %list;
     }
 .benefits-section__item {
@@ -35,9 +34,6 @@
             }
         }
 }
-// .benefits-section__item:not(:first-child) {
-//     margin-left: 30px;
-//     }
 .benefits-section__box {
     @include centeredFlex(flex);
     // max-width: 270px;

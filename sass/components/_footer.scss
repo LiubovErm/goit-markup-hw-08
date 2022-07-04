@@ -6,11 +6,8 @@
     padding-right: 15px;
     }
 .footer-container {
-    // display: flex;
     max-width: 1200px;
     margin: 0 auto;
-    // padding-left: 15px;
-    // padding-right: 15px;
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         display: flex;
         flex-wrap: wrap;
@@ -78,8 +75,6 @@ address {
     @media screen and (max-width: 767px) {
             margin-top: 60px;
         }
-    // padding-top: 12px;
-    // margin-left: 70px;
     }
 .call-to-action__text {
     text-transform: uppercase;
@@ -116,14 +111,12 @@ address {
     }
     }
 .subscription {
-    // margin-left: auto;
     @media screen and (max-width: 1199px) {
         text-align: center;
         margin-top: 60px;
     } 
 }
 .subscription__group {
-    // display: flex;
     @media screen and (min-width: 1200px) {
         display: flex;
     } 

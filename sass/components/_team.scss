@@ -27,14 +27,14 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     background-color: $main-white-color;
     @media screen and (min-width: 480px) and (max-width: 767px) {
-            width: 450px;
+            width: 354px;
         }
-    @media screen and (max-width: 767px) and (max-width: 1199px) {
+    @media screen and (max-width: 767px) {
             &:not(:last-child) {
                 margin-bottom: 30px;
             }
         }
-     @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
             width: 354px;
             &:not(:nth-last-child(-n + 2)) {
                 margin-bottom: 30px;
@@ -42,6 +42,11 @@
             &:not(:nth-child(2n)) {
                 margin-right: 30px;
             }
+    }
+    @media screen and (min-width: 1200px) {
+        &:not(:first-child) {
+            margin-left: 30px;
+        }
     }
 }
 // .team-section__item:not(:first-child) {

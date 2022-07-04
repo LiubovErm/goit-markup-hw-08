@@ -30,12 +30,12 @@
             width: 95%;
         }
     @media screen and (min-width: 480px) {
-            min-width: 450px;
-            min-height: 609px;
+            width: 450px;
+            height: 609px;
         }
     @media screen and (min-width: 1200px) {
-            min-width: 528px;
-            min-height: 581px;
+            width: 528px;
+            height: 581px;
         }
     }
 .backdrop.is-hidden.modal {

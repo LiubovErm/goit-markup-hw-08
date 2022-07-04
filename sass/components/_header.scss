@@ -8,6 +8,7 @@
             height: 60px;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
         }
 .logo {
@@ -69,10 +70,14 @@
     padding-top: 32px;
     padding-bottom: 32px;
     color: $primary-text-color;
-    @include transition(color);
+    &:hover,
+    &:focus {
+        color: $accent-color;
     }
+    @include transition(color);
+}
 .navigation__link--current {
-    color: var(--accent-color);
+    color: $accent-color;
     }
 .navigation__link--current::after {
     content: "";

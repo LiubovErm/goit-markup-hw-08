@@ -133,6 +133,9 @@
     &:focus {
         color:$accent-color;
     }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 12px;
+    }
     }
 .header-icon {
     fill: currentColor;

@@ -1,14 +1,46 @@
 .porfolio-section {
-    @extend %section; 
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+        }
     background-color: $main-white-color;
     }  
 .porfolio-filter {
-    @include centeredFlex(flex);
+    display: flex;
     @extend %list;
-    margin-bottom: 56px;
-    } 
-.porfolio-filter__item:not(:first-child) {
-    margin-left: 8px;
+    @media screen and (max-width: 767px) {
+        justify-content: start;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+      @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+        justify-content: center;
+      }
+      @media screen and (min-width: 1199px) {
+        margin-bottom: 50px;
+      }
+    }
+    // & + & {
+    // @media screen and (min-width: 768px) {
+    //     margin: -15px;
+    //     }
+    //   }
+    // &:first-of-type {
+    //     margin-bottom: 50px;
+    //   }
+
+// .porfolio-filter__item:not(:first-child) {
+//     margin-left: 8px;
+//     }
+
+.porfolio-filter__item:not(:last-child) {
+    margin-right: 8px;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 15px;
+        }
     }
 .porfolio-filter__button {
     text-align: center;
@@ -33,17 +65,32 @@
     }
     }
 .portfolio-cards {
-    @include centeredFlex(flex);
+    // @include centeredFlex(flex);
     @extend %list;
+    display: flex;
     flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: -30px;
+    margin: -15px;
+    // margin-top: -30px;
+    // margin-left: -30px;
     background-color: $main-white-color;
     }
 .portfolio-cards__item {
-    flex-basis: calc(100%/3 - 30px);
-    margin-left: 30px;
-    margin-top: 30px;
+    // flex-basis: calc(100%/3 - 30px);
+    // margin-left: 30px;
+    // margin-top: 30px;
+    @media screen and (min-width: 768px) {
+        margin: 15px;
+        width: calc((100% - 60px) / 2);
+      }
+    @media screen and (min-width: 1200px) {
+        margin: 15px;
+        width: calc((100% - 90px) / 3);
+      }
+    &:not(:last-child) {
+     @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+        }
+}
 }
 .portfolio-cards__link {
     display: block;
@@ -85,6 +132,9 @@
     border-right: 1px solid $border-cards;
     border-top: none;
     padding: 20px 24px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        height: 146px;
+    }
     }  
 .portfolio-cards__subtitle {
     font-weight: 700;

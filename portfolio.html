@@ -10,16 +10,24 @@
     <link rel="stylesheet" href="./css/main.min.css">
 
 </head>
-<body class="pageportfolio">
+<body>
     
     <header class="header">
         <div class="container">
         <div class="header-container">
             <a href="./index.html" class="logo" lang="en"><span class="logo__text">Web</span>Studio</a>
+        
+        <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-open>
+            <svg class="menu-button__icon" width="24" height="16" area-label="button of mobile menu">
+                <use href="./images/icons.svg#icon-menu-mobile" class="icon-menu"></use>
+            </svg>
+        </button>
+
+        <div class="menu-desktop"> 
         <nav class="navigation">
             <ul class="navigation__list">
                 <li class="navigation__item"><a href="./index.html" class="navigation__link">Студия</a></li>
-                <li class="navigation__item"><a href="./portfolio.html" class="navigation__link navigation__link--current ">Портфолио</a></li>
+                <li class="navigation__item"><a href="./portfolio.html" class="navigation__link navigation__link--current">Портфолио</a></li>
                 <li class="navigation__item"><a href="#contacts" class="navigation__link">Контакты</a></li>
             </ul>
         </nav>
@@ -41,6 +49,53 @@
                     </a>
                 </li>
             </ul>
+        </div>
+        </div>
+
+        <div class="menu-container" id="menu-container" data-menu>
+            <button type="button" class="close-menu" data-menu-close>
+                <svg class="menu-button__icon" width="24" height="16" area-label="button of mobile menu">
+                    <use href="./images/icons.svg#icon-close-mobile" class="icon-cross"></use>
+                </svg>
+            </button>
+        
+        <nav class="mobile-menu">
+           <ul class="mobile-menu__list">
+               <li class="mobile-menu__item">
+               <a href="./index.html" class="mobile-menu__link mobile-menu__link--current">Студия</a>
+               </li>
+               <li class="mobile-menu__item">
+               <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
+               </li>
+               <li class="mobile-menu__item">
+               <a href="/" class="mobile-menu__link">Контакты</a>
+               </li>
+            </ul>
+            </nav>
+            <div class="mobile-contacts">
+                <ul class="mobile-contacts__list">
+                    <li class="mobile-contacts__item">
+                        <a href="tel:+380961111111" class="mobile-contacts__link mobile-contacts__link--phone">+38 096 111 11 11</a>
+                    </li>
+                    <li class="mobile-contacts__item">
+                        <a href="mailto:info@devstudio.com" class="mobile-contacts__link mobile-contacts__link--email">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mobile-social">
+                    <li class="mobile-social__item">
+                    <a href="/" class="mobile-social__link">Instagram</a>
+                    </li>
+                    <li class="mobile-social__item">
+                    <a href="/" class="mobile-social__link">Twitter</a>
+                    </li>
+                    <li class="mobile-social__item">
+                    <a href="/" class="mobile-social__link">Facebook</a>
+                    </li>
+                    <li class="mobile-social__item">
+                    <a href="/" class="mobile-social__link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         </div>
     </header>
@@ -72,7 +127,21 @@
 <li class="portfolio-cards__item">
     <a href="/" class="portfolio-cards__link">
     <div class="portfolio-cards__wrapper">
-      <img src="./images/tecnocrat.jpg" alt="project website" class="projects-img" width="370"> 
+        <picture>
+            <source media="(min-width: 1200px)" srcset="
+                ./images/cards/desctop-card1.jpg 1x,
+                ./images/cards/desctop-card1@2x.jpg 2x
+                "/>
+            <source media="(min-width: 768px)" srcset="
+                ./images/cards/tablet-card1.jpg 1x,
+                ./images/cards/tablet-card1@2x.jpg 2x
+                "/>
+            <source media="(max-width: 767px)" srcset="
+                ./images/cards/mobile-card1.jpg 1x,
+                ./images/cards/mobile-card1@2x.jpg 2x
+                "/>
+                <img src="./images/cards/tecnocrat.jpg" alt="project website" class="projects-img">
+        </picture>
         <div class="portfolio-cards__description">
         <p class="portfolio-cards__overlay">
             Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -90,7 +159,21 @@
 <li class="portfolio-cards__item">
     <a href="/" class="portfolio-cards__link">
     <div class="portfolio-cards__wrapper">
-    <img src="./images/poster.jpg" alt="project design" class="projects-img" width="370">
+        <picture>
+            <source media="(min-width: 1200px)" srcset="
+                ./images/cards/desctop-card2.jpg 1x,
+                ./images/cards/desctop-card2@2x.jpg 2x
+                "/>
+            <source media="(min-width: 768px)" srcset="
+                ./images/cards/tablet-card2.jpg 1x,
+                ./images/cards/tablet-card2@2x.jpg 2x
+                "/>
+            <source media="(max-width: 767px)" srcset="
+                ./images/cards/mobile-card2.jpg 1x,
+                ./images/cards/mobile-card2@2x.jpg 2x
+                "/>
+                <img src="./images/cards/poster.jpg" alt="project design" class="projects-img">
+        </picture>
     <div class="portfolio-cards__description">
         <p class="portfolio-cards__overlay">
             Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -108,7 +191,21 @@
 <li class="portfolio-cards__item">
     <a href="/" class="portfolio-cards__link">
     <div class="portfolio-cards__wrapper">
-    <img src="./images/restourant.jpg" alt="project application" class="portfolio-cards__img" width="370">
+        <picture>
+            <source media="(min-width: 1200px)" srcset="
+                ./images/cards/desctop-card3.jpg 1x,
+                ./images/cards/desctop-card3@2x.jpg 2x
+                "/>
+            <source media="(min-width: 768px)" srcset="
+                ./images/cards/tablet-card3.jpg 1x,
+                ./images/cards/tablet-card3@2x.jpg 2x
+                "/>
+            <source media="(max-width: 767px)" srcset="
+                ./images/cards/mobile-card3.jpg 1x,
+                ./images/cards/mobile-card3@2x.jpg 2x
+                "/>
+                <img src="./images/cards/restourant.jpg" alt="project application" class="portfolio-cards__img">
+        </picture>
     <div class="portfolio-cards__description">
         <p class="portfolio-cards__overlay">
             Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -126,7 +223,22 @@
 <li class="portfolio-cards__item">
     <a href="/" class="portfolio-cards__link">
     <div class="portfolio-cards__wrapper">
-    <img src="./images/prime.jpg" alt="project marketing" class="portfolio-cards__img" width="370">
+        <picture>
+            <source media="(min-width: 1200px)" srcset="
+                ./images/cards/desctop-card4.jpg 1x,
+                ./images/cards/desctop-card4@2x.jpg 2x
+                "/>
+            <source media="(min-width: 768px)" srcset="
+                ./images/cards/tablet-card4.jpg 1x,
+                ./images/cards/tablet-card4@2x.jpg 2x
+                "/>
+            <source media="(max-width: 767px)" srcset="
+                ./images/cards/mobile-card4.jpg 1x,
+                ./images/cards/mobile-card4@2x.jpg 2x
+                "/>
+                <img src="./images/cards/prime.jpg" alt="project marketing" class="portfolio-cards__img">
+        </picture>
+    
     <div class="portfolio-cards__description">
         <p class="portfolio-cards__overlay">
             Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -144,7 +256,21 @@
 <li class="portfolio-cards__item">
     <a href="/" class="portfolio-cards__link">
     <div class="portfolio-cards__wrapper">
-    <img src="./images/boxes.jpg" alt="boxes project" class="portfolio-cards__img" width="370">
+        <picture>
+            <source media="(min-width: 1200px)" srcset="
+                ./images/cards/desctop-card5.jpg 1x,
+                ./images/cards/desctop-card5@2x.jpg 2x
+                "/>
+            <source media="(min-width: 768px)" srcset="
+                ./images/cards/tablet-card5.jpg 1x,
+                ./images/cards/tablet-card5@2x.jpg 2x
+                "/>
+            <source media="(max-width: 767px)" srcset="
+                ./images/cards/mobile-card5.jpg 1x,
+                ./images/cards/mobile-card5@2x.jpg 2x
+                "/>
+                <img src="./images/cards/boxes.jpg" alt="boxes project" class="portfolio-cards__img">
+        </picture>
     <div class="portfolio-cards__description">
         <p class="portfolio-cards__overlay">
             Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -162,7 +288,21 @@
 <li class="portfolio-cards__item">
     <a href="/" class="portfolio-cards__link">
     <div class="portfolio-cards__wrapper">
-    <img src="./images/inspiration.jpg" alt="project web site" class="portfolio-cards__img" width="370">
+        <picture>
+            <source media="(min-width: 1200px)" srcset="
+                ./images/cards/desctop-card6.jpg 1x,
+                ./images/cards/desctop-card6@2x.jpg 2x
+                "/>
+            <source media="(min-width: 768px)" srcset="
+                ./images/cards/tablet-card6.jpg 1x,
+                ./images/cards/tablet-card6@2x.jpg 2x
+                "/>
+            <source media="(max-width: 767px)" srcset="
+                ./images/cards/mobile-card6.jpg 1x,
+                ./images/cards/mobile-card6@2x.jpg 2x
+                "/>
+                <img src="./images/cards/inspiration.jpg" alt="project web site" class="portfolio-cards__img">
+        </picture>
     <div class="portfolio-cards__description">
         <p class="portfolio-cards__overlay">
             Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -180,7 +320,21 @@
 <li class="portfolio-cards__item">
     <a href="/" class="portfolio-cards__link">
     <div class="portfolio-cards__wrapper">
-    <img src="./images/limited.jpg" alt="project design" class="portfolio-cards__img" width="370">
+        <picture>
+            <source media="(min-width: 1200px)" srcset="
+                ./images/cards/desctop-card7.jpg 1x,
+                ./images/cards/desctop-card7@2x.jpg 2x
+                "/>
+            <source media="(min-width: 768px)" srcset="
+                ./images/cards/tablet-card7.jpg 1x,
+                ./images/cards/tablet-card7@2x.jpg 2x
+                "/>
+            <source media="(max-width: 767px)" srcset="
+                ./images/cards/mobile-card7.jpg 1x,
+                ./images/cards/mobile-card7@2x.jpg 2x
+                "/>
+                <img src="./images/cards/limited.jpg" alt="project design" class="portfolio-cards__img">
+        </picture>
     <div class="portfolio-cards__description">
         <p class="portfolio-cards__overlay">
             Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -198,7 +352,21 @@
 <li class="portfolio-cards__item">
     <a href="/" class="portfolio-cards__link">
     <div class="portfolio-cards__wrapper">
-    <img src="./images/lab.jpg" alt="project marketing" class="portfolio-cards__img" width="370">
+        <picture>
+            <source media="(min-width: 1200px)" srcset="
+                ./images/cards/desctop-card8.jpg 1x,
+                ./images/cards/desctop-card8@2x.jpg 2x
+                "/>
+            <source media="(min-width: 768px)" srcset="
+                ./images/cards/tablet-card8.jpg 1x,
+                ./images/cards/tablet-card8@2x.jpg 2x
+                "/>
+            <source media="(max-width: 767px)" srcset="
+                ./images/cards/mobile-card8.jpg 1x,
+                ./images/cards/mobile-card8@2x.jpg 2x
+                "/>
+                <img src="./images/cards/lab.jpg" alt="project marketing" class="portfolio-cards__img">
+        </picture>
     <div class="portfolio-cards__description">
         <p class="portfolio-cards__overlay">
             Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -216,7 +384,21 @@
 <li class="portfolio-cards__item">
     <a href="/" class="portfolio-cards__link">
     <div class="portfolio-cards__wrapper">
-    <img src="./images/growingb.jpg" alt="project application" class="portfolio-cards__img" width="370">
+        <picture>
+            <source media="(min-width: 1200px)" srcset="
+                ./images/cards/desctop-card9.jpg 1x,
+                ./images/cards/desctop-card9@2x.jpg 2x
+                "/>
+            <source media="(min-width: 768px)" srcset="
+                ./images/cards/tablet-card9.jpg 1x,
+                ./images/cards/tablet-card9@2x.jpg 2x
+                "/>
+            <source media="(max-width: 767px)" srcset="
+                ./images/cards/mobile-card9.jpg 1x,
+                ./images/cards/mobile-card9@2x.jpg 2x
+                "/>
+                <img src="./images/cards/growingb.jpg" alt="project application" class="portfolio-cards__img">
+        </picture>
     <div class="portfolio-cards__description">
         <p class="portfolio-cards__overlay">
             Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю
@@ -304,6 +486,9 @@
            </form>
         </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
+
     
 </body>
 </html>

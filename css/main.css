@@ -353,6 +353,11 @@ img {
     font-size: 36px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .section-title {
+    margin-bottom: 30px;
+  }
+}
 
 .header {
   border-bottom: 1px solid #ECECEC;
@@ -668,6 +673,7 @@ img {
 
 .mobile-contacts__link {
   text-decoration: none;
+  font-weight: 500px;
 }
 
 .mobile-contacts__item:not(:last-child) {
@@ -1055,6 +1061,11 @@ img {
 .conditions__text {
   color: #757575;
 }
+@media screen and (max-width: 1199px) {
+  .conditions__text {
+    font-size: 12px;
+  }
+}
 
 .conditions__link {
   color: #2196F3;
@@ -1285,7 +1296,7 @@ img {
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .team-section__item {
-    width: 354px;
+    width: 450px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1468,10 +1479,6 @@ img {
   padding-right: 15px;
 }
 
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-container {
     display: -webkit-box;

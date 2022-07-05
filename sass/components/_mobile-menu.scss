@@ -1,16 +1,15 @@
 .menu-button {
     border: none;
-    cursor: pointer;
-    background-color: transparent;
-    color: $primary-text-color;
     width: 40px;
     height: 40px;
     padding: 12px 8px;
-    top: 10px;
+    color: $primary-text-color;
+    background-color: transparent;
     &:hover,
     &:focus {
         color: $accent-color;
     }
+    @include transition(color);
     @media screen and (min-width: 768px) {
         display: none;
         }
@@ -35,11 +34,11 @@
 }
 
 .menu-container {
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 48px 40px;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -48,7 +47,7 @@
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
+    // pointer-events: none;
     background-color: $main-white-color;
     &.is-open {
         opacity: 1;
@@ -69,7 +68,6 @@
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: $primary-text-color;
-    cursor: pointer;
     @include transition(color);
     &:hover,
     &:focus {
@@ -107,7 +105,12 @@
     @extend %list;
 }
 .mobile-social__item:not(:last-child) {
-    margin-right: 20px;
+    padding-right: 10px;
+    border-right: 1px solid $border-modal;
+}
+.mobile-social__item:not(:first-child) {
+    padding-left: 10px;
+    border-left: 1px solid $border-modal;
 }
 .mobile-social__link {
     text-decoration: none;

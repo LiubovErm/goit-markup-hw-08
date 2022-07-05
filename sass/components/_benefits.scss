@@ -16,14 +16,13 @@
             justify-content: center;
             margin: -15px;
     }
-     @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1200px) {
              display: flex;
     }
     @extend %list;
     }
 .benefits-section__item {
     margin-bottom: 30px;
-    // flex-basis: calc(100%/3 - 30px);
     @media screen and (min-width: 768px) and (max-width: 1199px) {
             margin: 15px;
             width: 354px;
@@ -36,7 +35,6 @@
 }
 .benefits-section__box {
     @include centeredFlex(flex);
-    // max-width: 270px;
     height: 120px;
     margin-bottom: 30px;
     border-radius: 4px;

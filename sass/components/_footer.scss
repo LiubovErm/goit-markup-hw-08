@@ -13,9 +13,8 @@
         flex-wrap: wrap;
         align-items: baseline;
         justify-content: space-around;
-        }
-    
-        @media screen and (min-width: 1200px) {
+    }
+    @media screen and (min-width: 1200px) {
         display: flex;
         align-items: baseline;
         justify-content: space-between;
@@ -24,7 +23,7 @@
 .footer-contacts {
     @media screen and (max-width: 1199px) {
         text-align: center;
-        }
+    }
 }
 .logo--footer {
     color: $main-white-color;
@@ -132,7 +131,6 @@ address {
     }
 .subscription__input {
     width: 100%;
-    // height: 50px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
@@ -144,11 +142,11 @@ address {
     @media screen and (max-width: 1199px) {
         margin-bottom: 20px;
         }
-        @media screen and (min-width: 480px) {
+    @media screen and (min-width: 480px) {
         min-width: 450px;
         min-height: 50px;
         }
-        @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1200px) {
         min-width: 358px;
         }
     }

@@ -1,4 +1,4 @@
-.porfolio-section {
+.portfolio-section {
     padding-top: 60px;
     padding-bottom: 60px;
     @media screen and (min-width:1200px) {
@@ -7,7 +7,7 @@
         }
     background-color: $main-white-color;
     }  
-.porfolio-filter {
+.portfolio-filter {
     display: flex;
     @extend %list;
     @media screen and (max-width: 767px) {
@@ -23,13 +23,13 @@
         margin-bottom: 50px;
       }
     }
-.porfolio-filter__item:not(:last-child) {
+.portfolio-filter__item:not(:last-child) {
     margin-right: 8px;
     @media screen and (max-width: 767px) {
         margin-bottom: 15px;
         }
     }
-.porfolio-filter__button {
+.portfolio-filter__button {
     text-align: center;
     font-weight: 500;
     font-size: 16px;

@@ -1,5 +1,4 @@
-.clients-section {
-    // @extend %section; 
+.clients-section { 
     @include centeredFlex(flex);
     flex-wrap: wrap;
     padding-top: 60px;
@@ -29,8 +28,7 @@
 }
 .clients-section__link {
     @include centeredFlex(flex);
-    // width: 170px;
-    height: 92px;
+    height: 100%;
     border-radius: 4px;
     color: $icon-color;
     @include bordered ($icon-color);

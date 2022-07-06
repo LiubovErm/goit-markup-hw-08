@@ -100,7 +100,7 @@
     top:50%;
     left: 0;
     margin-left: 12px;
-    // transform: translateY(-50%);
+    transform: translateY(-50%);
     @include transition(color);
     }
 .form-modal__input:focus~.form-icon {

@@ -1,4 +1,4 @@
-.portfolio-cards, .portfolio-filter, .clients-section__list, .socialcontacts__list, .team-section__list, .activities-section__list, .benefits-section__list, .mobile-social, .mobile-contacts__list, .mobile-menu__list, .header-contacts, .navigation__list {
+.portfolio-cards, .portfolio-filter, .address__list, .call-to-action__list, .clients-section__list, .socialcontacts__list, .team-section__list, .activities-section__list, .benefits-section__list, .mobile-social, .mobile-contacts__list, .mobile-menu__list, .header-contacts, .navigation__list {
   list-style: none;
 }
 

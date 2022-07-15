@@ -137,18 +137,22 @@
                     <span class="form-modal__title">Коментар</span>
                     <textarea class="form-modal__textarea" type="text" name="comment" id="comment" rows="6" placeholder="Введіть текст"></textarea>
                 </label>
+                
                 <div class="conditions">
                     <label for="agree" class="conditions__label">
-                        <input type="checkbox" class="conditions__checkbox" name="agree-mailing" id="agree">
+                    <input type="checkbox" class="conditions__checkbox-input" name="agree-mailing" id="agree"> 
+                    <span class="conditions__text">Погоджуюся з розсилкою та приймаю <a href="./index.html" class="conditions__link">Умови договора</a></span>
+                    <span class="conditions_checkbox-box--nochecked"></span>
+                    <span class="conditions_checkbox-box">
                         <svg class="agree-icon" width="11px" height="8px">
-                        <use href="./images/icons.svg#icon-agree"></use>
+                          <use href="./images/icons.svg#icon-agree"></use>
                         </svg>
-                        <span class="conditions__text">Погоджуюся з розсилкою та приймаю <a href="./index.html" class="conditions__link">Умови договора</a></span>
+                    </span>
                     </label>
-                    <button type="submit" class="modal__button">Відправити</button>
-                </div>
-                
-            </form>
+                        
+                        <button type="submit" class="modal__button">Відправити</button>
+                    </div>
+                    </form>
         </div>
     </div>
     <main>

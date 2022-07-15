@@ -128,23 +128,52 @@
     line-height: 1.17;
     color: $label-modal;
     }     
+
+
 .conditions {
     @include centeredFlex(flex);
     flex-wrap: wrap;
     }
 .conditions__label {
+    position: relative;
     @include centeredFlex(flex);
+    padding-left: 24px;
     }  
-.conditions__checkbox {
-    @extend %visually-hidden;
+.conditions__checkbox-input {
+    appearance: none;
+    position: absolute;
+    &:checked ~ .conditions_checkbox-box {
+        opacity: 1;
+      }
+    }
+.conditions_checkbox-box--nochecked {
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    left: 0;
+    border-radius: 2px;
+    @include bordered ($primary-text-color);
 }
-.conditions__checkbox:checked+.agree-icon {
-    background-image: url(/images/icons.svg#icon-agree);
-    background-size: contain;
-    background-origin: border-box;
+.conditions_checkbox-box {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    opacity: 0;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    // @include bordered ($primary-text-color);
+    @include transition(opacity);
+    }
+.agree-icon {
+    @include centeredFlex(flex);
     background-color: $accent-color;
-    border-color: $accent-color;
-    }      
+    fill: $main-white-color;
+    border-radius: 2px;
+    width: 16px;
+    height: 15px;
+    }    
 .conditions__text {
     color: $secondary-text-color;
     @media screen and (max-width: 1199px) {
@@ -154,15 +183,6 @@
 .conditions__link {
     color: $accent-color;
     }
-.agree-icon {
-    display: inline-block;
-    width: 16px;
-    height: 15px;
-    margin-right: 8px;
-    border-radius: 2px;
-    @include bordered ($primary-text-color);
-    @include transition(color);
-    }  
 .modal__button {
     width: 200px;
     height: 50px;

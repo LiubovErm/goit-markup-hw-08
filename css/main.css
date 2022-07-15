@@ -2,7 +2,7 @@
   list-style: none;
 }
 
-.section-title-hidden, .conditions__checkbox {
+.section-title-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1041,6 +1041,7 @@ img {
 }
 
 .conditions__label {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1050,14 +1051,56 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-left: 24px;
 }
 
-.conditions__checkbox:checked + .agree-icon {
-  background-image: url(/images/icons.svg#icon-agree);
-  background-size: contain;
-  background-origin: border-box;
+.conditions__checkbox-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+}
+.conditions__checkbox-input:checked ~ .conditions_checkbox-box {
+  opacity: 1;
+}
+
+.conditions_checkbox-box--nochecked {
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  left: 0;
+  border-radius: 2px;
+  border: 1px solid #212121;
+}
+
+.conditions_checkbox-box {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  opacity: 0;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.agree-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #2196F3;
-  border-color: #2196F3;
+  fill: #FFFFFF;
+  border-radius: 2px;
+  width: 16px;
+  height: 15px;
 }
 
 .conditions__text {
@@ -1071,17 +1114,6 @@ img {
 
 .conditions__link {
   color: #2196F3;
-}
-
-.agree-icon {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-  border-radius: 2px;
-  border: 1px solid #212121;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__button {

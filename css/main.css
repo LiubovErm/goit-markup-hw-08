@@ -409,7 +409,6 @@ img {
     padding-bottom: 25px;
   }
 }
-
 .logo__text {
   color: #2196F3;
 }
@@ -444,7 +443,6 @@ img {
     margin-left: 93px;
   }
 }
-
 .navigation__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -456,11 +454,9 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .navigation__item:not(:last-child) {
   margin-right: 50px;
 }
-
 .navigation__link {
   position: relative;
   text-decoration: none;

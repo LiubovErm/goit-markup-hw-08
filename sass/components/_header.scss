@@ -33,10 +33,10 @@
         padding-top: 24px;
         padding-bottom: 25px;
     }
-}
-.logo__text {
+  &__text {
     color:$accent-color;
-    }  
+    } 
+} 
 .menu-desktop {
     @media screen and (max-width: 767px) {
             display: none;
@@ -51,17 +51,16 @@
     @media screen and (min-width: 1200px) {
             margin-left: 93px;
         }
-    }
-.navigation__list {
+    &__list {
     @include centeredFlex(flex);
     @extend %list;
 }
-.navigation__item {
+    &__item {
     &:not(:last-child) {
         margin-right: 50px;
     }
 }
-.navigation__link {
+    &__link {
     position: relative;
     text-decoration: none;
     font-weight: 500;
@@ -76,6 +75,8 @@
     }
     @include transition(color);
 }
+}
+
 .navigation__link--current {
     color: $accent-color;
     }
